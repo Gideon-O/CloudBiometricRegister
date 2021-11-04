@@ -1,0 +1,24 @@
+{% extends 'home.html' %}
+
+{% block title %}Event stuff {% endblock %}
+
+{% block content %}
+  <form method='POST' action=''>
+    {% csrf_token %}
+    <h3 style='text-align: center'>Hey there, add your venues</h3>
+
+    <input type="text" name='session_name' id='session_name' placeholder='Activity Name'>
+    <br/>
+    
+    <input type="date" name='session_date' id='session_date' placeholder='Activity Date'>
+    <br/>
+    <input type="time" name='session_time' id='session_time' placeholder='Activity Time'>
+    <br/>
+    <input type="text" name='session_duration' id='session_duration' placeholder='Activity Duration'>
+    <br/>
+    <br/>
+    <input type='submit' name='submit'>
+  
+  </form>
+
+{% endblock %}
